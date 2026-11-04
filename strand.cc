@@ -3,7 +3,7 @@
 
 #include "strand.h"
 
-void Strand::SetTemplate(std::string emplate) {
+bool Strand::SetTemplate(std::string emplate) {
     dna_template_ = emplate;
     dna_coding_ = "";
     mrna_sequence_ = "";
@@ -28,6 +28,7 @@ void Strand::SetTemplate(std::string emplate) {
               break;
             default:
               std::cout << "Error in sequence\n";
+              return false;
         }
     }
     std::string current_codon{""}; //holds the bases in each codon
@@ -47,9 +48,10 @@ void Strand::SetTemplate(std::string emplate) {
     } else {
       enough_bases_ = true;
     }
+    return true;
 }
 
-void Strand::SetCoding(std::string coding) {
+bool Strand::SetCoding(std::string coding) {
     dna_coding_ = coding;
     dna_template_ = "";
     mrna_sequence_ = "";
@@ -74,6 +76,7 @@ void Strand::SetCoding(std::string coding) {
               break;
             default:
               std::cout << "Error in sequence\n";
+              return false;
         }
     }
     std::string current_codon{""}; //holds the bases in each codon
@@ -93,9 +96,10 @@ void Strand::SetCoding(std::string coding) {
     } else {
       enough_bases_ = true;
     }
+    return true;
 }
 
-void Strand::SetMRNA(std::string mrna) {
+bool Strand::SetMRNA(std::string mrna) {
     mrna_sequence_ = mrna;
     dna_coding_ = "";
     dna_template_ = "";
@@ -119,6 +123,7 @@ void Strand::SetMRNA(std::string mrna) {
               break;
             default:
               std::cout << "Error in sequence\n";
+              return false;
         }
     }
     std::string current_codon{""}; //holds the bases in each codon
@@ -138,8 +143,10 @@ void Strand::SetMRNA(std::string mrna) {
     } else {
       enough_bases_ = true;
     }
+    return true;
 }
 
-void Strand::SetAminoAcidSequence(std::string amino_acid_sequence) {
+bool Strand::SetAminoAcidSequence(std::string amino_acid_sequence) {
     std::cout << "code to be added later";
+    return false;
 }
