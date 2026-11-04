@@ -25,6 +25,7 @@ int main(int argc, char* argv[]) {
     }
     auto sequence_ptr = std::make_unique<Strand>(); //using a unique pointer for practice
     int menu_input{0};
+    int prime_direction{-1}; //1 if the sequence is 5'-3', 2 if the sequence is 3'-5'
     std::cout << "Which sequence is this?\n";
     std::cout << "1. Template DNA Sequence\n";
     std::cout << "2. Coding DNA Sequence\n";
@@ -35,6 +36,15 @@ int main(int argc, char* argv[]) {
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         std::cout << "Please enter \"1\", \"2\", \"3\", or \"4.\" Ctrl+C to force quit. ";
     }
+    std::cout << "Is the sequence:";
+    std::cout << "1. 5' to 3'\n";
+    std::cout << "2. 3' to 5'\n";
+    while ((!(std::cin >> prime_direction)) && prime_direction != 1 && prime_direction != 2) {
+        std::cin.clear();
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        std::cout << "Please enter \"1\" or \"2\" Ctrl+C to force quit.";
+    }
+
     std::transform(input_sequence.begin(), input_sequence.end(), input_sequence.begin(), ::toupper);
     input_sequence.erase(std::remove(input_sequence.begin(), input_sequence.end(), ' '), input_sequence.end());
     bool no_sequence_error{false};
