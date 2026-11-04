@@ -1,6 +1,7 @@
 #ifndef BIO_STRAND_H
 #define BIO_STRAND_H
 
+#include <map>
 #include <string>
 
 class Strand {
@@ -18,6 +19,31 @@ class Strand {
   std::string dna_coding_;
   std::string mrna_sequence_;
   std::string amino_acid_sequence_;
+  const std::map<std::string, char> codon_to_amino_acid_{
+    {"UUU", 'F'}, {"UUC", 'F'}, {"UUA", 'L'}, {"UUG", 'L'},
+    {"UCU", 'S'}, {"UCC", 'S'}, {"UCA", 'S'}, {"UCG", 'S'},
+    {"UAU", 'Y'}, {"UAC", 'Y'}, {"UAA", 'X'}, {"UAG", 'X'},
+    {"UGU", 'C'}, {"UGC", 'C'}, {"UGA", 'X'}, {"UGG", 'W'},
+    {"CUU", 'L'}, {"CUC", 'L'}, {"CUA", 'L'}, {"CUG", 'L'},
+    {"CCU", 'P'}, {"CCC", 'P'}, {"CCA", 'P'}, {"CCG", 'P'},
+    {"CAU", 'H'}, {"CAC", 'H'}, {"CAA", 'Q'}, {"CAG", 'Q'},
+    {"CGU", 'R'}, {"CGC", 'R'}, {"CGA", 'R'}, {"CGG", 'R'},
+    {"AUU", 'I'}, {"AUC", 'I'}, {"AUA", 'I'}, {"AUG", 'M'},
+    {"ACU", 'T'}, {"ACC", 'T'}, {"ACA", 'T'}, {"ACG", 'T'},
+    {"AAU", 'N'}, {"AAC", 'N'}, {"AAA", 'K'}, {"AAG", 'K'},
+    {"AGU", 'S'}, {"AGC", 'S'}, {"AGA", 'R'}, {"AGG", 'R'},
+    {"GUU", 'V'}, {"GUC", 'V'}, {"GUA", 'V'}, {"GUG", 'V'},
+    {"GCU", 'A'}, {"GCC", 'A'}, {"GCA", 'A'}, {"GCG", 'A'},
+    {"GAU", 'D'}, {"GAC", 'D'}, {"GAA", 'E'}, {"GAG", 'E'},
+    {"GGU", 'G'}, {"GGC", 'G'}, {"GGA", 'G'}, {"GGG", 'G'}
+  };
+  const std::map<char, std::string> amino_acid_char_to_string_{
+    {'A', "Ala"}, {'R', "Arg"}, {'N', "Asn"}, {'D', "Asp"},
+    {'C', "Cys"}, {'E', "Glu"}, {'Q', "Gln"}, {'G', "Gly"},
+    {'H', "His"}, {'I', "Ile"}, {'L', "Leu"}, {'K', "Lys"},
+    {'M', "Met"}, {'F', "Phe"}, {'P', "Pro"}, {'S', "Ser"},
+    {'T', "Thr"}, {'W', "Trp"}, {'Y', "Tyr"}, {'V', "Val"}
+  }
 };
 
 #endif
