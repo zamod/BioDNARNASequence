@@ -5,7 +5,7 @@
 
 class Strand {
  public:
-  void SetTemplate(std::string template);
+  void SetTemplate(std::string emplate);
   void SetCoding(std::string coding);
   void SetMRNA(std::string mrna);
   void SetAminoAcidSequence(std::string amino_acid_sequence);
@@ -18,6 +18,6 @@ class Strand {
   std::string dna_coding_;
   std::string mrna_sequence_;
   std::string amino_acid_sequence_;
-}
+};
 
 #endif

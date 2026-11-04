@@ -1,0 +1,8 @@
+Template Sequence: 
+TGCCTAACGTAAG
+Coding Sequence: 
+ACGGATTGCATTC
+mRNA Sequence: 
+UGCCUAACGUAAG
+Amino Acid Sequence: 
+Placeholder

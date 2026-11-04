@@ -1,13 +1,14 @@
+#include <iostream>
 #include <string>
 
 #include "strand.h"
 
-void Strand::SetTemplate(std::string template) {
-    dna_template_ = template;
+void Strand::SetTemplate(std::string emplate) {
+    dna_template_ = emplate;
     dna_coding_ = "";
     mrna_sequence_ = "";
     amino_acid_sequence_ = "";
-    for (const auto& element : template) {
+    for (const auto& element : emplate) {
         switch (element) {
             case 'A':
               dna_coding_ += "T";
@@ -36,7 +37,7 @@ void Strand::SetCoding(std::string coding) {
     dna_template_ = "";
     mrna_sequence_ = "";
     amino_acid_sequence_ = "";
-    for (const auto& element : template) {
+    for (const auto& element : coding) {
         switch (element) {
             case 'A':
               dna_template_ += "T";
@@ -64,7 +65,7 @@ void Strand::SetMRNA(std::string mrna) {
     mrna_sequence_ = mrna;
     dna_coding_ = "";
     dna_template_ = "";
-    for (const auto& element : template) {
+    for (const auto& element : mrna) {
         switch (element) {
             case 'A':
               dna_template_ += "T";

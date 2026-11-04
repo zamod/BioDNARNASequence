@@ -84,7 +84,7 @@ int main(int argc, char* argv[]) {
         output_file << "Coding Sequence: \n";
         output_file << sequence_ptr->GetCoding() << "\n";
         output_file << "mRNA Sequence: \n";
-        output_file << sequence_ptr->GetMRNA();
+        output_file << sequence_ptr->GetMRNA() << "\n";
         output_file << "Amino Acid Sequence: \n";
         output_file << sequence_ptr->GetAminoAcidSequence();
         output_file.close();
