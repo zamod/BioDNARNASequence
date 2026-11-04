@@ -36,6 +36,7 @@ int main(int argc, char* argv[]) {
         std::cout << "Please enter \"1\", \"2\", \"3\", or \"4.\" Ctrl+C to force quit. ";
     }
     std::transform(input_sequence.begin(), input_sequence.end(), input_sequence.begin(), ::toupper);
+    input_sequence.erase(std::remove(input_sequence.begin(), input_sequence.end(), ' '), input_sequence.end());
     bool no_sequence_error{false};
     switch (menu_input) {
         case 1:
