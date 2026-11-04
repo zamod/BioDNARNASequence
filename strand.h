@@ -16,6 +16,7 @@ class Strand {
   std::string GetMRNA() {return mrna_sequence_;};
   std::string GetAminoAcidSequence() {return amino_acid_sequence_;};
   std::string GetLengthyAminoAcids() {return lengthy_amino_acids_;};
+  bool GetEnoughBases() {return enough_bases_;};
 
  private:
   std::string dna_template_;

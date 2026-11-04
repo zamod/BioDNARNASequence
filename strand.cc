@@ -9,7 +9,7 @@ void Strand::CalculateLengthyAminoAcids() {
     lengthy_amino_acids_ += " ";
   }
   if (!lengthy_amino_acids_.empty()) {
-    lengthy_amino_acids_.pop_back();
+    lengthy_amino_acids_.pop_back(); //removes last empty space to correct the previous loop
   }
 }
 
