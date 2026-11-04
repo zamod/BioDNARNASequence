@@ -122,7 +122,6 @@ void Strand::SetMRNA(std::string mrna) {
         }
     }
     std::string current_codon{""}; //holds the bases in each codon
-    std::string current_codon{""}; //holds the bases in each codon
     int loop_count{0};
     for (const auto& element : mrna_sequence_) {
       current_codon += element;
