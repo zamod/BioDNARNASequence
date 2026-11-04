@@ -1,8 +1,10 @@
 Template Sequence:
-ACTGCCTTGGCTTAAGGCCe
+ACTGCCTTGGCTTAAGGCC
 Coding Sequence:
 TGACGGAACCGAATTCCGG
 mRNA Sequence:
 UGACGGAACCGAAUUCCGG
 Amino Acid Sequence:
 XRNRIP
+Amino Acid Sequence Full Abbreviation:
+STOP Arg Asn Arg Ile Pro 

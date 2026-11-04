@@ -3,6 +3,13 @@
 
 #include "strand.h"
 
+void Strand::CalculateLengthyAminoAcids() {
+  for (const auto& element : amino_acid_sequence_) {
+    lengthy_amino_acids_ += amino_acid_char_to_string_.at(element);
+    lengthy_amino_acids_ += " ";
+  }
+}
+
 bool Strand::SetTemplate(std::string emplate) {
     dna_template_ = emplate;
     dna_coding_ = "";
@@ -43,6 +50,7 @@ bool Strand::SetTemplate(std::string emplate) {
         }
       }
     }
+    CalculateLengthyAminoAcids();
     if (loop_count % 3 != 0) {
       enough_bases_ = false;
     } else {
@@ -91,6 +99,7 @@ bool Strand::SetCoding(std::string coding) {
         }
       }
     }
+    CalculateLengthyAminoAcids();
     if (loop_count % 3 != 0) {
       enough_bases_ = false;
     } else {
@@ -138,6 +147,7 @@ bool Strand::SetMRNA(std::string mrna) {
         }
       }
     }
+    CalculateLengthyAminoAcids();
     if (loop_count % 3 != 0) {
       enough_bases_ = false;
     } else {

@@ -102,7 +102,9 @@ int main(int argc, char* argv[]) {
         output_file << "mRNA Sequence:\n";
         output_file << sequence_ptr->GetMRNA() << "\n";
         output_file << "Amino Acid Sequence:\n";
-        output_file << sequence_ptr->GetAminoAcidSequence();
+        output_file << sequence_ptr->GetAminoAcidSequence() << "\n";
+        output_file << "Amino Acid Sequence Full Abbreviation:\n";
+        output_file << sequence_ptr->GetLengthyAminoAcids();
         output_file.close();
         std::cout << "File writing complete.\n";
     } else {
