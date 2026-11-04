@@ -79,13 +79,13 @@ int main(int argc, char* argv[]) {
     }
     std::ofstream output_file(output_file_name);
     if (output_file.is_open()) {
-        output_file << "Template Sequence: \n";
+        output_file << "Template Sequence:\n";
         output_file << sequence_ptr->GetTemplate() << "\n";
-        output_file << "Coding Sequence: \n";
+        output_file << "Coding Sequence:\n";
         output_file << sequence_ptr->GetCoding() << "\n";
-        output_file << "mRNA Sequence: \n";
+        output_file << "mRNA Sequence:\n";
         output_file << sequence_ptr->GetMRNA() << "\n";
-        output_file << "Amino Acid Sequence: \n";
+        output_file << "Amino Acid Sequence:\n";
         output_file << sequence_ptr->GetAminoAcidSequence();
         output_file.close();
         std::cout << "File writing complete.\n";

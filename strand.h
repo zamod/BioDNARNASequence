@@ -13,12 +13,13 @@ class Strand {
   std::string GetTemplate() {return dna_template_;};
   std::string GetCoding() {return dna_coding_;};
   std::string GetMRNA() {return mrna_sequence_;};
-  std::string GetAminoAcidSequence() {return "Placeholder";};
+  std::string GetAminoAcidSequence() {return amino_acid_sequence_;};
  private:
   std::string dna_template_;
   std::string dna_coding_;
   std::string mrna_sequence_;
   std::string amino_acid_sequence_;
+  bool enough_bases_;
   const std::map<std::string, char> codon_to_amino_acid_{
     {"UUU", 'F'}, {"UUC", 'F'}, {"UUA", 'L'}, {"UUG", 'L'},
     {"UCU", 'S'}, {"UCC", 'S'}, {"UCA", 'S'}, {"UCG", 'S'},
@@ -43,7 +44,7 @@ class Strand {
     {'H', "His"}, {'I', "Ile"}, {'L', "Leu"}, {'K', "Lys"},
     {'M', "Met"}, {'F', "Phe"}, {'P', "Pro"}, {'S', "Ser"},
     {'T', "Thr"}, {'W', "Trp"}, {'Y', "Tyr"}, {'V', "Val"}
-  }
+  };
 };
 
 #endif

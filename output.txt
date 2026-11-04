@@ -1,8 +1,8 @@
 Template Sequence: 
-ACTG
+ACTGCCTTGGCTTAAGGCCA
 Coding Sequence: 
-TGAC
+TGACGGAACCGAATTCCGGT
 mRNA Sequence: 
-UGAC
+UGACGGAACCGAAUUCCGGU
 Amino Acid Sequence: 
-Placeholder
+XRNRIP

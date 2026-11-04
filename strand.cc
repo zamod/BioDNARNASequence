@@ -30,6 +30,23 @@ void Strand::SetTemplate(std::string emplate) {
               std::cout << "Error in sequence\n";
         }
     }
+    std::string current_codon{""}; //holds the bases in each codon
+    int loop_count{0};
+    for (const auto& element : mrna_sequence_) {
+      current_codon += element;
+      ++loop_count;
+      if (loop_count % 3 == 0) {
+        if (codon_to_amino_acid_.find(current_codon) != codon_to_amino_acid_.end()) {
+          amino_acid_sequence_ += codon_to_amino_acid_.at(current_codon);
+          current_codon = "";
+        }
+      }
+    }
+    if (loop_count % 3 != 0) {
+      enough_bases_ = false;
+    } else {
+      enough_bases_ = true;
+    }
 }
 
 void Strand::SetCoding(std::string coding) {
@@ -59,6 +76,23 @@ void Strand::SetCoding(std::string coding) {
               std::cout << "Error in sequence\n";
         }
     }
+    std::string current_codon{""}; //holds the bases in each codon
+    int loop_count{0};
+    for (const auto& element : mrna_sequence_) {
+      current_codon += element;
+      ++loop_count;
+      if (loop_count % 3 == 0) {
+        if (codon_to_amino_acid_.find(current_codon) != codon_to_amino_acid_.end()) {
+          amino_acid_sequence_ += codon_to_amino_acid_.at(current_codon);
+          current_codon = "";
+        }
+      }
+    }
+    if (loop_count % 3 != 0) {
+      enough_bases_ = false;
+    } else {
+      enough_bases_ = true;
+    }
 }
 
 void Strand::SetMRNA(std::string mrna) {
@@ -86,6 +120,24 @@ void Strand::SetMRNA(std::string mrna) {
             default:
               std::cout << "Error in sequence\n";
         }
+    }
+    std::string current_codon{""}; //holds the bases in each codon
+    std::string current_codon{""}; //holds the bases in each codon
+    int loop_count{0};
+    for (const auto& element : mrna_sequence_) {
+      current_codon += element;
+      ++loop_count;
+      if (loop_count % 3 == 0) {
+        if (codon_to_amino_acid_.find(current_codon) != codon_to_amino_acid_.end()) {
+          amino_acid_sequence_ += codon_to_amino_acid_.at(current_codon);
+          current_codon = "";
+        }
+      }
+    }
+    if (loop_count % 3 != 0) {
+      enough_bases_ = false;
+    } else {
+      enough_bases_ = true;
     }
 }
 
