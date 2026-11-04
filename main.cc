@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <fstream>
 #include <iostream>
 #include <limits> //for error checking
@@ -34,6 +35,7 @@ int main(int argc, char* argv[]) {
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         std::cout << "Please enter \"1\", \"2\", \"3\", or \"4.\" Ctrl+C to force quit. ";
     }
+    std::transform(input_sequence.begin(), input_sequence.end(), input_sequence.begin(), ::toupper);
     bool no_sequence_error{false};
     switch (menu_input) {
         case 1:
