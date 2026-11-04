@@ -1,10 +1,12 @@
 Template Sequence:
-ACTGCCTTGGCTTAAGGCC
+TGACGGAACCGAATTCCGGACGGA
 Coding Sequence:
-TGACGGAACCGAATTCCGG
+ACTGCCTTGGCTTAAGGCCTGCCT
 mRNA Sequence:
-UGACGGAACCGAAUUCCGG
+UGACGGAACCGAAUUCCGGACGGA
 Amino Acid Sequence:
-XRNRIP
+XRNRIPDG
 Amino Acid Sequence Full Abbreviation:
-STOP Arg Asn Arg Ile Pro 
+STOP Arg Asn Arg Ile Pro Asp Gly
+Is there a multiple of three bases in the sequence?: 
+True

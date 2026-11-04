@@ -105,7 +105,7 @@ int main(int argc, char* argv[]) {
         output_file << sequence_ptr->GetAminoAcidSequence() << "\n";
         output_file << "Amino Acid Sequence Full Abbreviation:\n";
         output_file << sequence_ptr->GetLengthyAminoAcids() << "\n";
-        output_file << "Is there a multiple of three bases in the sequence?: \n";
+        output_file << "Is there a multiple of three bases in the sequence?\n";
         if (sequence_ptr->GetEnoughBases()) {
             output_file << "True";
         } else {
