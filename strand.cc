@@ -119,19 +119,19 @@ bool Strand::SetMRNA(std::string mrna) {
         switch (element) {
             case 'A':
               dna_template_ += "T";
-              dna_coding_ += "T";
+              dna_coding_ += "A";
               break;
             case 'U':
               dna_template_ += "A";
-              dna_coding_ += "A";
+              dna_coding_ += "T";
               break;
             case 'C':
               dna_template_ += "G";
-              dna_coding_ += "G";
+              dna_coding_ += "C";
               break;
             case 'G':
               dna_template_ += "C";
-              dna_coding_ += "C";
+              dna_coding_ += "G";
               break;
             default:
               std::cout << "Error in sequence\n";
