@@ -12,7 +12,7 @@ class Strand {
   std::string GetTemplate() {return dna_template_;};
   std::string GetCoding() {return dna_coding_;};
   std::string GetMRNA() {return mrna_sequence_;};
-  std::string GetAminoAcidSequence() {return amino_acid_sequence_;};
+  std::string GetAminoAcidSequence() {return "Placeholder";};
  private:
   std::string dna_template_;
   std::string dna_coding_;
