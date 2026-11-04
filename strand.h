@@ -6,10 +6,10 @@
 
 class Strand {
  public:
-  void SetTemplate(std::string emplate);
-  void SetCoding(std::string coding);
-  void SetMRNA(std::string mrna);
-  void SetAminoAcidSequence(std::string amino_acid_sequence);
+  bool SetTemplate(std::string emplate);
+  bool SetCoding(std::string coding);
+  bool SetMRNA(std::string mrna);
+  bool SetAminoAcidSequence(std::string amino_acid_sequence);
   std::string GetTemplate() {return dna_template_;};
   std::string GetCoding() {return dna_coding_;};
   std::string GetMRNA() {return mrna_sequence_;};

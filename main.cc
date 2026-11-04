@@ -34,18 +34,31 @@ int main(int argc, char* argv[]) {
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         std::cout << "Please enter \"1\", \"2\", \"3\", or \"4.\" Ctrl+C to force quit. ";
     }
+    bool no_sequence_error{false};
     switch (menu_input) {
         case 1:
-            sequence_ptr->SetTemplate(input_sequence);
+            no_sequence_error = sequence_ptr->SetTemplate(input_sequence);
+            if (!no_sequence_error) {
+                return 4;
+            }
             break;
         case 2:
-            sequence_ptr->SetCoding(input_sequence);
+            no_sequence_error = sequence_ptr->SetCoding(input_sequence);
+            if (!no_sequence_error) {
+                return 4;
+            }
             break;
         case 3:
-            sequence_ptr->SetMRNA(input_sequence);
+            no_sequence_error = sequence_ptr->SetMRNA(input_sequence);
+            if (!no_sequence_error) {
+                return 4;
+            }
             break;
         case 4:
-            sequence_ptr->SetAminoAcidSequence(input_sequence);
+            no_sequence_error = sequence_ptr->SetAminoAcidSequence(input_sequence);
+            if (!no_sequence_error) {
+                return 4;
+            }
             break;
         default:
             std::cout << "Something went horribly wrong.\n";

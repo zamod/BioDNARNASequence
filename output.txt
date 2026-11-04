@@ -1,8 +1,8 @@
-Template Sequence: 
-ACTGCCTTGGCTTAAGGCCA
-Coding Sequence: 
-TGACGGAACCGAATTCCGGT
-mRNA Sequence: 
-UGACGGAACCGAAUUCCGGU
-Amino Acid Sequence: 
+Template Sequence:
+ACTGCCTTGGCTTAAGGCCe
+Coding Sequence:
+TGACGGAACCGAATTCCGG
+mRNA Sequence:
+UGACGGAACCGAAUUCCGG
+Amino Acid Sequence:
 XRNRIP
