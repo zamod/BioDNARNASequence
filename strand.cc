@@ -8,6 +8,9 @@ void Strand::CalculateLengthyAminoAcids() {
     lengthy_amino_acids_ += amino_acid_char_to_string_.at(element);
     lengthy_amino_acids_ += " ";
   }
+  if (!lengthy_amino_acids_.empty()) {
+    lengthy_amino_acids_.pop_back();
+  }
 }
 
 bool Strand::SetTemplate(std::string emplate) {
