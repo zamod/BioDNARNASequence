@@ -6,24 +6,31 @@
 
 class Strand {
  public:
-  bool SetTemplate(std::string emplate);
-  bool SetCoding(std::string coding);
-  bool SetMRNA(std::string mrna);
+  bool SetTemplate5(std::string emplate);
+  bool SetCoding5(std::string coding);
+  bool SetMRNA5(std::string mrna);
   bool SetAminoAcidSequence(std::string amino_acid_sequence);
   void CalculateLengthyAminoAcids();
-  std::string GetTemplate() {return dna_template_;};
-  std::string GetCoding() {return dna_coding_;};
-  std::string GetMRNA() {return mrna_sequence_;};
-  std::string GetAminoAcidSequence() {return amino_acid_sequence_;};
+  std::string GetTemplate5() {return dna_template_5_;};
+  std::string GetCoding5() {return dna_coding_5_;};
+  std::string GetMRNA5() {return mrna_sequence_5_;};
+  std::string GetAminoAcidSequence5() {return amino_acid_sequence_5_;};
   std::string GetLengthyAminoAcids() {return lengthy_amino_acids_;};
   bool GetEnoughBases() {return enough_bases_;};
+  std::string ReverseDirectionality();
+  void CalculateAminoAcids5();
+  void Strand::CalculateAminoAcids3()
 
  private:
-  std::string dna_template_;
-  std::string dna_coding_;
-  std::string mrna_sequence_;
-  std::string amino_acid_sequence_;
+  std::string dna_template_5_;
+  std::string dna_coding_5_;
+  std::string mrna_sequence_5_;
+  std::string amino_acid_sequence_5_;
   std::string lengthy_amino_acids_;
+  std::string dna_template_3_;
+  std::string dna_coding_3_;
+  std::string mrna_sequence_3_;
+  std::string amino_acid_sequence_3_;
   bool enough_bases_;
   const std::map<std::string, char> codon_to_amino_acid_{
     {"UUU", 'F'}, {"UUC", 'F'}, {"UUA", 'L'}, {"UUG", 'L'},
