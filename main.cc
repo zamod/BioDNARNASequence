@@ -50,21 +50,45 @@ int main(int argc, char* argv[]) {
     bool no_sequence_error{false};
     switch (menu_input) {
         case 1:
-            no_sequence_error = sequence_ptr->SetTemplate(input_sequence);
-            if (!no_sequence_error) {
-                return 4;
+            if (prime_direction == 1) {
+                no_sequence_error = sequence_ptr->SetTemplate5(input_sequence);
+                if (!no_sequence_error) {
+                    return 4;
+                }
+            }
+            if (prime_direction == 2) {
+                no_sequence_error = sequence_ptr->SetTemplate3(input_sequence);
+                if (!no_sequence_error) {
+                    return 4;
+                }
             }
             break;
         case 2:
-            no_sequence_error = sequence_ptr->SetCoding(input_sequence);
-            if (!no_sequence_error) {
-                return 4;
+            if (prime_direction == 1) {
+                no_sequence_error = sequence_ptr->SetCoding5(input_sequence);
+                if (!no_sequence_error) {
+                    return 4;
+                }
+            }
+            if (prime_direction == 2) {
+                no_sequence_error = sequence_ptr->SetCoding3(input_sequence);
+                if (!no_sequence_error) {
+                    return 4;
+                }
             }
             break;
         case 3:
-            no_sequence_error = sequence_ptr->SetMRNA(input_sequence);
-            if (!no_sequence_error) {
-                return 4;
+            if (prime_direction == 1) {
+                no_sequence_error = sequence_ptr->SetMRNA5(input_sequence);
+                if (!no_sequence_error) {
+                    return 4;
+                }
+            }
+            if (prime_direction == 2) {
+                no_sequence_error = sequence_ptr->SetMRNA3(input_sequence);
+                if (!no_sequence_error) {
+                    return 4;
+                }
             }
             break;
         case 4:

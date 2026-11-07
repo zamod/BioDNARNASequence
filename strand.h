@@ -7,7 +7,9 @@
 class Strand {
  public:
   bool SetTemplate5(std::string emplate);
+  bool SetTemplate3(std::string emplate);
   bool SetCoding5(std::string coding);
+  bool SetCoding3(std::string coding);
   bool SetMRNA5(std::string mrna);
   bool SetAminoAcidSequence(std::string amino_acid_sequence);
   void CalculateLengthyAminoAcids();
@@ -19,14 +21,15 @@ class Strand {
   bool GetEnoughBases() {return enough_bases_;};
   std::string ReverseDirectionality();
   void CalculateAminoAcids5();
-  void Strand::CalculateAminoAcids3()
+  void CalculateAminoAcids3();
 
  private:
   std::string dna_template_5_;
   std::string dna_coding_5_;
   std::string mrna_sequence_5_;
   std::string amino_acid_sequence_5_;
-  std::string lengthy_amino_acids_;
+  std::string lengthy_amino_acids_5_;
+  std::string lengthy_amino_acids_3_;
   std::string dna_template_3_;
   std::string dna_coding_3_;
   std::string mrna_sequence_3_;
